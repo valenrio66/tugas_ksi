@@ -92,6 +92,21 @@
   </div>
 </div>
 
+<div class="section" id="about">
+  <div class="container">
+    <div class="card">
+      {% block content-1 %}
+      {% for v in post %}
+          <div class="card-body">
+            <div class="h4 mt-0 title"><center>{{v.title}}</center></div>
+            <p>{{v.body}}</p>
+          </div>
+      {% endfor %}
+      {% endblock content-1 %}
+    </div>
+  </div>
+</div>
+
             <footer class="footer">
                 <div class="container text-center">
                     <a class="cc-facebook btn btn-link" href="#">
