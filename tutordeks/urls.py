@@ -15,14 +15,16 @@ Including another URLconf
 """
 from xml.etree.ElementInclude import include
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.http import HttpResponse
 
 from . import views
 
 urlpatterns = [
-    path('blog/', include('blog.urls')),
-    path('', views.index),
-    path('about/', views.about),
+    path('blog/', include('blog.urls', namespace='blog')),
+    path('', views.index, name='index'),
+    path('about/', include('about.urls', namespace='about')),
+    path('form/', include('form.urls', namespace='form')),
     path('admin/', admin.site.urls),
+    re_path(r'^articles/(?P<year>[0-9]{4})/$', views.articles, name='dinamis'),
 ]
