@@ -25,6 +25,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('about/', include('about.urls', namespace='about')),
     path('form/', include('form.urls', namespace='form')),
+    path('daftar/', include('form.urls', namespace='form')),
     path('admin/', admin.site.urls),
     re_path(r'^articles/(?P<year>[0-9]{4})/$', views.articles, name='dinamis'),
 ]

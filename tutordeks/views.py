@@ -6,7 +6,7 @@ def index(request):
     context = {
         'judul' : 'Home',
         'h2' : 'This is Home',
-        'p' : 'Click the Button Below To See My Blog!'
+        'p' : 'Choose The Button Below!'
     }
     return render(request, 'index.html', context)
 

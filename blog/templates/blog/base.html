@@ -39,6 +39,12 @@
                 data-aos="zoom-in"
                 data-aos-anchor="data-aos-anchor"
                 >Click For Detail!</a>
+                <a
+                class="btn btn-primary"
+                href="{% url "blog:update" %}"
+                data-aos="zoom-in"
+                data-aos-anchor="data-aos-anchor"
+                >List Data</a>
                                 </div>
                             </div>
         <div class="section">
@@ -101,6 +107,7 @@
             <div class="h4 mt-0 title"><center>{{v.title}}</center></div>
             <p>Body : {{v.body}}</p>
             <p>Email : {{v.email}}</p>
+            <p>Slug : {{v.slug}}</p>
           </div>
       {% endfor %}
       {% endblock content-1 %}
